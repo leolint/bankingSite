@@ -1,0 +1,161 @@
+@import 'mixins';
+
+.footer {
+    width: 100%;
+    margin: 160px 0px 0px 0px;
+    @include br(sm) {
+        margin: 124px 0px 0px 0px;
+    }
+    &-logo {
+        img {
+            @include br(sm) {
+                width: 211px;
+                padding-bottom: 40px;
+            }
+        }
+        border-bottom: 1px gray solid;
+    }
+    &_wrapper {
+
+        &-content {
+            margin: 60px 0px 52px 0px;
+            display: flex;
+            align-items: center;
+
+            @include br(sm) {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+
+            &--qr {
+                display: flex;
+                align-items: start;
+                padding: 20px 50px 20px 16px;
+                border: 1px grey dashed;
+                border-radius: 5px;
+
+                @include br(md) {
+                    align-items: start;
+                    padding: 20px 20px 20px 20px;
+                }
+
+                @include br(sm) {
+                    padding: 20px 20px 20px 16px;
+                }
+
+                img {
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+
+                    @include br(sm) {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+
+                &__stores {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 12px;
+
+                    p {
+                        font-size: 20px;
+                        color: white;
+                        padding: 0px 0px 16px 0px;
+                        margin: 0px 0px 0px 0px;
+
+                        @include br(sm) {
+                            font-size: 14px;
+                        }
+                    }
+
+                    &-links {
+                        display: flex;
+                        align-items: center;
+
+                        @include br(sm) {
+                            padding: 10px 0px 0px 0px;
+                        }
+
+                        img {
+                            width: 15px;
+                            height: 18px;
+
+                            &:first-of-type {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+
+                }
+            }
+            &-lists {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            &-list {
+                color: white;
+                list-style-type: none;
+                padding: 0px 0px 0px 0px;
+                column-gap: 160px;
+                margin: 0px 0px 0px 135px;
+                .list_title {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                @include br(xl) {
+                    column-gap: 50px;
+                    margin: 0px 0px 0px 70px;
+                }
+
+                @include br(sm) {
+                    column-gap: 0px;
+                    margin: 56px 70px 0px 0px;
+                }
+                li {
+                    padding: 0px 0px 12px 0px;
+                    cursor: pointer;
+                    transition: 0.3s ease;  
+                    font-size: 16px;
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.3s ease;
+                    }
+                }
+            }
+        }
+
+        &-language {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 56px;
+
+            select {
+                background-color: #070606;
+                color: white;
+                border: none;
+                outline: none;
+                font-size: 24px;
+                border-radius: 0%;
+
+                @include br(sm) {
+                    width: 226px;
+                    font-size: 14px;
+                }
+            }
+
+            h6 {
+                color: white;
+                margin: 0px 0px 0px 0px;
+                font-size: 16px;
+                font-family: 'SF pro display ultraLight';
+
+                @include br(sm) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

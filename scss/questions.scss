@@ -1,0 +1,76 @@
+@import 'mixins';
+
+.questions {
+    &_title {
+        font-size: 96px;
+        text-align: start;
+        color: white;
+        margin: 132px 0px 100px 0px;
+        @include br(md) {
+            font-size: 70px;
+        }
+        @include br(sm) {
+            font-size: 60px;
+            line-height: 80px;
+        }
+    }
+    &_wrapper {
+
+        &-item {
+
+            border-bottom: 1px rgba(128, 128, 128, 0.637) solid;
+            margin: 24px 0px 0px 0px;
+            @include br(sm) {
+                margin: 0px 0px 0px 0px;
+            }
+            &--title {
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 40px;
+                font-size: 24px;
+                margin: 0px 0px 0px 0px;
+                @include br(sm) {
+                    font-size: 16px;
+                    padding-bottom: 0px;
+                }
+                button {
+                    width: 20px;
+                    height: 20px;
+                    border-top: 2px white solid;
+                    border-left: 2px white solid;
+                    border-bottom: none;
+                    border-right: none ;
+                    background-color: transparent;
+                    transform: rotate(-135deg) translateX(-10px);
+                    transition: 0.3s ease;
+                    @include br(sm) {
+                        transform: rotate(-135deg) translateX(7px);
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            &--description {
+                color: white;
+                height: 0px;
+                opacity: 0;
+                transition: 0.3s ease;
+            }
+        }
+    }
+    
+}
+
+
+.openDescriptionText {
+    height: 100px;
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.arrowRotate {
+    transform: rotate(45deg) !important;
+    transition: 0.3s ease;
+}

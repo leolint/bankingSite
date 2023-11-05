@@ -1,0 +1,77 @@
+@mixin br($br) {
+    @if $br==xxs {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+
+    @if $br==xs {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+
+    @if $br==sm {
+        @media (max-width: 425px) {
+            @content;
+        }
+    }
+
+    @if $br==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @if $br==xl {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+}
+
+@font-face {
+    font-family: 'SF pro display regular'; 
+    src: url('/fonts/SF-Pro-Display-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF pro display bold'; 
+    src: url('/fonts/SF-Pro-Display-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF pro display medium'; 
+    src: url('/fonts/SF-Pro-Display-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SF pro display light'; 
+    src: url('/fonts/SF-Pro-Display-Light.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF pro display ultraLight'; 
+    src: url('/fonts/SF-Pro-Display-Ultralight.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF pro display semiBold'; 
+    src: url('/fonts/SF-Pro-Display-Semibold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$base-green : #2B892E;
+$base-gray : #BDBDBD;

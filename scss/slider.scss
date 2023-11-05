@@ -1,0 +1,118 @@
+@import 'mixins';
+
+.slider {
+    width: 100%;
+    background-color: #48D64C;
+    position: relative;
+  
+    .swiper {
+        width: 100%;
+        &_title {
+            text-align: center;
+            margin: 100px 0px 104px 0px;
+            font-size: 75px;
+            @include br(sm) {
+                margin: 32px 0px 40px 0px;
+                font-size: 32px;
+            }
+        }
+        &-wrapper {
+            margin: 0px 0px 200px 0px;
+            @include br(sm) {
+                margin: 0px 0px 0px 0px;
+            }
+            .swiper-slide {
+                .comments {
+                    width: 100%;
+                    display: flex;
+                    @include br(sm) {
+                        margin: 0px 0px 100px 0px;
+                    }
+                    &_item {
+                        border-left: 2px black solid;
+                        @include br(sm) {
+                            border-left: 0px;
+                        }
+                        &-text {
+                            font-size: 20px;
+                            color: #292929;
+                            margin: 24px 32px 24px 32px;
+                        }
+
+                        &-user {
+                            display: flex;
+                            align-items: center;
+                            margin: 0px 32px 0px 32px;
+                            justify-content: space-between;
+                            @include br(sm) {
+                                justify-content: space-between;
+                            }
+                            figcaption {
+                                font-size: 24px;
+                                color: #070606;
+
+                                span {
+                                    font-size: 14px;
+                                    color: #292929;
+                                }
+                            }
+                            img {
+                                margin: 0px 0px 24px 0px;
+                                @include br(sm) {
+                                    width: 40px;
+                                    height: 40px;
+                                    margin: 24px 20px 24px 0px;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .navigation {
+            position: absolute;
+            display: flex;
+            width: 120px;
+            height: 200px;
+            bottom: 0%;
+            right: 5%;
+            @include br(sm) {
+                right: 8%;
+                bottom: -5%;
+            }
+            .swiper-button-next {
+                display: block;
+                width: 20px;
+                height: 20px;
+                color: transparent;
+                &::before{
+                    content: url(../images/arrowNext.svg);
+                    position: absolute;
+                    background: url() no-repeat;
+                    width: 130px;
+                    height: 130px;
+                  color: transparent;
+                }
+            }
+
+            .swiper-button-prev {
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: relative;
+                color: transparent;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background: url(../images/arrowPrev.svg) no-repeat;
+                    width: 130px;
+                    height: 130px;
+                    color: transparent;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@import 'mixins';
+
+.statistic {
+    width: 100%;
+    margin: 124px 0px 0px 0px;
+    @include br(sm) {
+        margin: 124px 0px 0px 0px;
+    }
+    &_title {
+        text-align: start;
+        color: white;
+        font-size: 75px;
+        margin: 0px 0px 24px 0px;
+        @include br(sm) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    &_subtitle {
+        text-align: start;
+        color: $base-gray;
+        font-family: 'SF pro display light'; 
+        margin: 0px 0px 100px 0px;
+        font-size: 20px;
+        @include br(sm) {
+            font-size: 16px;
+            line-height: 25px;
+            margin: 0px 0px 80px 0px;
+        }
+    }
+    &_wrapper {
+        width: 100%;
+        display: flex;
+        @include br(sm) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &-item {
+            padding: 52px 52px 0px 52px;
+            border-radius: 10px;
+            border: 1px rgba(128, 128, 128, 0.623) solid;
+            background-color: #131313;
+            position: relative;
+            @include br(sm) {
+               width: 100%;
+               padding: 24px 24px 24px 24px;
+               margin: 0px 0px 32px 0px !important;
+            }
+            &:first-of-type {
+                margin-right: 56px;
+            }
+            &:last-of-type {
+                @include br(sm) {
+                    margin: 0px 0px 0px 0px !important;
+                }
+            }
+            &--title {
+                color: white;
+                font-size: 32px;
+                text-align: start;
+                margin: 0px 0px 16px 0px;
+            }
+            &--subtitle {
+                color: $base-gray;
+                font-size: 20px;
+                text-align: start;
+                margin: 0px 0px 0px 0px;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                padding: 166px 0px 182px 0px;
+                @include br(xl) {
+                    padding: 50px 0px 50px 0px;
+                }
+            }
+        }
+    }
+    &_counters {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 100px 0px 100px 0px;
+        @include br(sm) {
+            margin: 60px 0px 90px 0px;
+        }
+        &-item {
+            &--title {
+                color: white;
+                font-size: 80px ;
+                margin:  0px 0px 16px 0px;
+                text-align: center;
+                @include br(md) {
+                    font-size: 60px;
+                }
+                @include br(sm) {
+                    font-size: 20px;
+                }
+            }
+            &--subtitle {
+                color: $base-gray;
+                font-size: 18px;
+                text-transform: uppercase;
+                margin:  0px 0px 0px 0px;
+                text-align: center;
+                font-family: 'SF pro display light'; 
+                font-weight: 200;
+                @include br(sm) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}   

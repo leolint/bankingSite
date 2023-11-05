@@ -1,0 +1,100 @@
+@import 'mixins';
+
+.getStarted {
+    width: 100%;
+    margin: 100px 0px 0px 0px;
+
+    @include br(xl) {
+        margin: 50px 0px 0px 0px;
+    }
+
+    &_mobileLink {
+        width: 100%;
+        display: none;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        margin: 43px 0px 16px 0px;
+        background-color: transparent;
+        border: none;
+
+        @include br(sm) {
+            display: flex;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 6px 36px 6px 12px;
+            background-color: #989898c2;
+            border: none;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-size: 14px;
+            border: 1px rgba(255, 255, 255, 0.753) solid;
+
+            &::after {
+                content: '';
+                display: block;
+                border-top: 2px white solid;
+                border-left: 2px white solid;
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                right: 17px;
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    &_wrapper {
+        width: 100%;
+        background: url(/images/Grid.png);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-title {
+            color: white;
+            text-align: center;
+            font-size: 96px;
+            font-family: 'SF pro display light';
+            margin: 48px 0px 24px 0px;
+
+            @include br(xl) {
+                margin: 0px 0px 24px 0px;
+            }
+
+            @include br(sm) {
+                font-size: 40px;
+            }
+        }
+
+        &-subtitle {
+            color: $base-gray;
+            font-size: 24px;
+            text-align: center;
+            font-family: 'SF pro display ultraLight';
+            margin: 0px 0px;
+        }
+
+        &-button {
+            color: white;
+            background-color: $base-green;
+            font-family: 'SF pro display semiBold';
+            font-size: 16px;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 35px;
+            margin-top: 32px;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: scale(1.2, 1.2);
+                transition: 0.3s ease;
+            }
+        }
+    }
+}

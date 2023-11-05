@@ -1,0 +1,86 @@
+@import 'mixins';
+
+.card {
+    width: 100%;
+    margin: 0px 0px 137px 0px;
+    @include br(sm) {
+        margin: 0px 0px 96px 0px;
+    }
+    &_title {
+        text-align: center;
+        font-size: 75px;
+        text-align: center;
+        color: white;
+        font-weight: 200;
+        margin: 0px 0px 24px 0px;
+        @include br(sm) {
+           font-size: 36px;
+           line-height: 50px;
+        }
+        span {
+            color: $base-green;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin: 0px 0px 16px 0px;
+        }
+    }
+    &_subtitle {
+        text-align: center;
+        color: $base-gray;
+        font-size: 20px;
+        font-weight: 200;
+        margin: 0px 0px 118px 0px;
+        @include br(sm) {
+            font-size: 16px;
+            margin: 0px 0px 92px 0px;
+        }
+    }
+    &_image {
+        display: block;
+        margin: 0 auto;
+    }
+    &_wrapper {
+        width: 100%;
+        margin-top: 86px;
+        display: flex;
+        @include br(sm) {
+           flex-direction: column;
+        }
+        &-item {
+            width: 100%;
+            margin: 0px 24px 0px 0px;
+            position: relative; 
+            @include br(sm) {
+                margin: 0px 0px 32px 0px !important;
+            }
+            &:last-child {
+                margin-right: 0px;
+            }
+            &--title {
+                color: white;
+                font-size: 24px;
+                margin: 0px 0px 14px 0px;
+                display: flex;
+                align-items: center;
+                @include br(md) {
+                    font-size: 15px;
+                }
+                @include br(sm) {
+                    font-size: 20px;
+                }
+                img {
+                    margin-right: 12px;
+                }
+            }
+
+            &--subtitle {
+                color: $base-gray;
+                font-size: 12px;
+                margin: 0px 0px;
+                @include br(sm) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

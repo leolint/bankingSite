@@ -1,0 +1,115 @@
+@import 'mixins';
+
+.finances {
+    width: 100%;
+    margin: 0px 0px 132px 0px;
+    @include br(sm) {
+        margin: 0px 0px 96px 0px;
+    }
+    img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    &_title {
+        color: white;
+        text-align: center;
+        font-size: 75px;
+        margin: 0px 0px 24px 0px ;
+        @include br(sm){
+            font-size: 36px;
+        }
+    }
+    &_subtitle {
+        color: $base-gray;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'SF pro display ultraLight'; 
+        margin: 0px 0px 124px 0px;
+        @include br(sm){
+            margin: 0px 0px 80px 0px;
+            font-size: 16px;
+        }
+    }
+    &_wrapper {
+        width: 100%;
+        margin: 86px 0px 0px 0px;
+        display: flex;
+        
+        @include br(sm) {
+            flex-direction: column;
+            margin: 56px 0px 0px 0px;
+        }
+        &-item {
+            width: 100%;
+            margin: 0px 24px 0px 0px;
+            @include br(sm) {
+                margin: 20px 0px 0px 0px !important;
+            }
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+            &:first-child{
+                position: relative;
+                .finances_wrapper-item--title{
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0px;
+                        top: 3%;
+                        width: 20px;
+                        height: 20px;
+                        background: url(../images/Union.svg);
+                    }
+                }
+            }
+            &:nth-child(2){
+                position: relative;
+                .finances_wrapper-item--title{
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0px;
+                        top: 3%;
+                        width: 20px;
+                        height: 20px;
+                        background: url(../images/Vector.svg);
+                    }
+                }
+            }
+            &:nth-child(3){
+                position: relative;
+                .finances_wrapper-item--title{
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0px;
+                        top: 3%;
+                        width: 20px;
+                        height: 20px;
+                        background: url(../images/Arrows.svg);
+                    }
+                }
+            }
+            &--title {
+                color: white;
+                font-size: 24px;
+                margin: 0px 0px 14px 0px;
+                padding-left: 30px;
+                @include br(sm) {
+                   font-size: 20px;
+                   margin: 0px 0px 10px 0px;
+                }
+            }
+
+            &--subtitle {
+                color: $base-gray;
+                font-size: 12px;
+                margin: 0px 0px;
+                @include br(sm) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

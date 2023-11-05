@@ -1,0 +1,77 @@
+@import 'mixins';
+@import 'header';
+@import 'getStarted';
+@import 'firstBgImage';
+@import 'magazines';
+@import 'RAFT';
+@import 'finances';
+@import 'investments';
+@import 'statistic';
+@import 'card';
+@import 'slider';
+@import 'questions';
+@import 'footer';
+
+*{
+    box-sizing: border-box;
+    letter-spacing: 2px;
+}
+
+body {
+    max-width: 1440px 100%;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background-color: #070606 ;
+    font-family: 'SF pro display regular'; 
+}
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+    @include br(xl) {
+        max-width: 1024px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    @include br(lg) {
+        max-width: 992px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    @include br(md) {
+        max-width: 768px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    @include br(sm) {
+        max-width: 425px;
+        padding: 0 24px;
+        box-sizing: border-box;
+        margin: 0px 0px 0px 0px;
+    }
+
+    @include br(xs) {
+        max-width: 375px;
+        padding: 0 5px;
+        box-sizing: border-box;
+        margin: 0px 0px 0px 0px;
+    }
+
+    @include br(xxs) {
+        max-width: 320px;
+        padding: 0 5px;
+        box-sizing: border-box;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.peopleBg {
+    width: 100%;
+}

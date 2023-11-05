@@ -1,0 +1,26 @@
+@import 'mixins';
+
+.magazines{
+    width: 100%;
+    margin: 0px 0px 192px 0px;
+    @include br(sm) {
+        margin: 0px 0px 112px 0px;
+    }
+    &_subtitle {
+        text-transform: uppercase;
+        text-align: center;
+        color: $base-gray;
+        font-size: 20px;
+        font-family: 'SF pro display medium'; 
+        margin-top: 104px;
+        margin-bottom: 48px;
+    }
+    &_wrapper {
+        width: 100%;
+        img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
