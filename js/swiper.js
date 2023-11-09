@@ -14,15 +14,11 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-console.log(innerWidth);
-
 if (window.innerWidth < 1100) {
   swiper.params.slidesPerView = 2;
-  swiper.update();
 }
 if (window.innerWidth < 500){
   swiper.params.slidesPerView = 1;
-  swiper.update();
 }
 
 

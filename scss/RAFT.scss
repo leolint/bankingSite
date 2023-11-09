@@ -54,6 +54,11 @@
             @include br(xl) {
                 margin: 20px 20px 20px 20px !important;
             }
+            @include br(sm) {
+                img {
+                    width: 300px;
+                }
+            }
         }
 
     }
