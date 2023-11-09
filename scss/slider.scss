@@ -80,6 +80,10 @@
             bottom: 0%;
             right: 6%;
             @include br(sm) {
+                right: 8%;
+                bottom: -5%;
+            }
+            @include br(xxs) {
                 right: 10%;
                 bottom: -5%;
             }
