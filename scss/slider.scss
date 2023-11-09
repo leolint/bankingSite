@@ -78,9 +78,9 @@
             width: 120px;
             height: 200px;
             bottom: 0%;
-            right: 5%;
+            right: 6%;
             @include br(sm) {
-                right: 8%;
+                right: 10%;
                 bottom: -5%;
             }
             .swiper-button-next {
