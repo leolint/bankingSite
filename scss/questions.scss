@@ -17,46 +17,40 @@
     &_wrapper {
 
         &-item {
-
             border-bottom: 1px rgba(128, 128, 128, 0.637) solid;
             margin: 24px 0px 0px 0px;
             @include br(sm) {
                 margin: 0px 0px 0px 0px;
             }
+
             &--title {
+                width: 100%;
                 color: white;
                 display: flex;
-                align-items: center;
+                align-items: start;
                 justify-content: space-between;
-                padding-bottom: 40px;
+                background-color: transparent;
+                border: none;
+                text-align: start;
+                padding: 34px 5px 34px 0px;
                 font-size: 24px;
                 margin: 0px 0px 0px 0px;
                 @include br(sm) {
                     font-size: 16px;
-                    padding-bottom: 0px;
                 }
-                button {
-                    width: 20px;
-                    height: 20px;
+                span {
+                    display: block;
+                    width: 15px;
+                    height: 15px;
                     border-top: 2px white solid;
                     border-left: 2px white solid;
-                    border-bottom: none;
-                    border-right: none ;
-                    background-color: transparent;
-                    transform: rotate(-135deg) translateX(-10px);
+                    transform: rotate(-135deg);
                     transition: 0.3s ease;
-                    @include br(sm) {
-                        transform: rotate(-135deg) translateX(7px);
-                        width: 15px;
-                        height: 15px;
-                    }
                 }
             }
             &--description {
                 color: white;
-                height: 0px;
-                opacity: 0;
-                transition: 0.3s ease;
+                display: none;
             }
         }
     }
@@ -65,9 +59,7 @@
 
 
 .openDescriptionText {
-    height: 100px;
-    opacity: 1;
-    transition: 0.3s ease;
+    display: block;
 }
 
 .arrowRotate {

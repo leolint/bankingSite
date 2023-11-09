@@ -2,7 +2,7 @@ function openQuestionDescription () {
   const buttons = document.querySelectorAll('.questions_wrapper-item--title');
 
   buttons.forEach(button => {
-    const arrow = button.children[1]
+    const arrow = button.children[0]
     const text = button.nextElementSibling
 
     button.addEventListener('click' , function() {
